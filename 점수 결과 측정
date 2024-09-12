@@ -1,0 +1,30 @@
+#include <stdio.h> 
+ 
+int main() 
+{
+    int hp, a, b, c, x;
+    scanf("%d", &hp);
+    if(hp<100 || hp>2000)
+    {
+        printf("입력 오류\n");
+    }
+    else
+    {
+        scanf("%d %d %d", &a, &b, &c);
+        
+        if(a<1 || b<1 || c<1 || a>10 || b>10 || c>10)
+        {
+            printf("입력 오류\n");
+        }
+        else
+        {
+            x=a*10+b*50+c*200;
+            printf("%d %d %d %d ", a*10, b*50, c*200, x);
+            if(x>=hp)
+                printf("승리\n");
+            else
+                printf("실패\n");
+        }
+    }
+   return 0;
+}
